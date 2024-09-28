@@ -49,6 +49,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Controllable Shape Modeling with Neural Generalized Cylinder</h1>
+          <h3 class="is-size-5 publication-authors">SIGGRAPH Asia 2024 (Conference track)</h3>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://github.com/uhzoaix">Xiangyu Zhu</a><sup>1</sup>,</span>
@@ -117,6 +118,197 @@
     </div>
   </div>
 </section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/0_teaser.png" class="still-image" alt="Result image." />
+      <h2 class="subtitle has-text-centered">
+        Neural generalized cylinder for shape deformation and blending.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Neural shape representation, such as neural signed distance field (NSDF), becomes more and more popular in shape
+          modeling as its ability to deal with complex topology and arbitrary resolution. Due to the implicit manner to use
+          features for shape representation, manipulating the shapes faces inherent challenge of inconvenience, since the feature
+          cannot be intuitively edited. In this work, we propose neural generalized cylinder (NGC) for explicit
+          manipulation of NSDF, which is an extension of traditional generalized cylinder (GC). Specifically, we define a central
+          curve first and assign neural features along the curve to represent the profiles. Then NSDF is defined on the relative
+          coordinates of a specialized GC with oval-shaped profiles. By using the relative coordinates, NSDF can be explicitly
+          controlled via manipulation of the GC. To this end, we apply NGC to many non-rigid deformation tasks like complex
+          curved deformation, local scaling and twisting for shapes. The comparison on shape deformation with other methods proves
+          the effectiveness and efficiency of NGC. Furthermore, NGC could utilize the neural feature for shape
+          blending by a simple neural feature interpolation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Deformation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Deformation</h2>
+        <p>
+          Explicitly control NGC with its curve, radius and frame.
+        </p>
+
+        <div class="columns is-centered">
+        
+          <!-- bending. -->
+          <div class="column">
+            <div class="content">
+              <h3 class="title is-">Bending</h3>
+              <video id="bending" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/tf_dolph222.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ bending. -->
+        
+          <!-- scaling. -->
+          <div class="column">
+            <div class="content">
+              <h3 class="title is-">Scaling</h3>
+              <video id="Scaling" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/scale_388.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ scaling. -->
+
+          <!-- twisting. -->
+          <div class="column">
+            <div class="content">
+              <h3 class="title is-">Twisting</h3>
+              <video id="Twisting" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/twist_hand_181.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ twisting. -->
+        </div>
+
+        <div class="columns is-centered">
+        
+          <!-- bending. -->
+          <div class="column">
+            <div class="content">
+              <video id="bending" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/tf_cylinder_222.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ bending. -->
+        
+          <!-- scaling. -->
+          <div class="column">
+            <div class="content">
+              <video id="Scaling" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/scale_cylinder_388.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ scaling. -->
+        
+          <!-- twisting. -->
+          <div class="column">
+            <div class="content">
+              <video id="Twisting" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/twist_demo.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ twisting. -->
+        </div>
+
+        <!-- more results. -->
+        <div class="columns is-vcentered interpolation-panel">
+          <img src="./static/images/4_exp_transform_curve.png" class="still-image"
+            alt="Result image." />
+          <!-- <p>Start Frame</p> -->
+        </div>
+        <br />
+        <!--/ more results. -->
+
+      </div>
+    </div>
+    <!--/ Deformation. -->
+
+
+    <!-- Blending. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Blending</h2>
+        <p>
+          Implicitly interpolate neural SDF of NGCs.
+        </p>
+    
+        <div class="columns is-centered">
+    
+          <!-- blend1. -->
+          <div class="column">
+            <div class="content">
+              <video id="blend1" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/mix_002946.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ blend1. -->
+    
+          <!-- blend2. -->
+          <div class="column">
+            <div class="content">
+              <video id="blend2" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/mix_222_sideview.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ blend2. -->
+    
+          <!-- blend3. -->
+          <div class="column">
+            <div class="content">
+              <video id="blend3" autoplay controls muted loop playsinline height="60%">
+                <source src="./static/videos/mix_248.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ blend3. -->
+        </div>
+    
+        <!-- more results. -->
+        <div class="columns is-vcentered interpolation-panel">
+          <img src="./static/images/4_exp_mix_part.png" class="still-image" alt="Result image." />
+          <!-- <p>Start Frame</p> -->
+        </div>
+        <br />
+        <!--/ more results. -->
+    
+      </div>
+    </div>
+    <!--/ Blending. -->
+
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">
